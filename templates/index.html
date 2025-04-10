@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>YouTube Downloader</h1>
+            <p>Download your favorite YouTube videos and playlists in high quality</p>
+        </div>
+
+        <div class="form-card">
+            <div class="input-group">
+                <label class="input-label" for="url">YouTube URL</label>
+                <input type="text" id="url" class="input-field" 
+                       placeholder="Enter YouTube video or playlist URL">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Download Type</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="type" value="video" checked class="radio-input">
+                        <span>Single Video</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="type" value="playlist" class="radio-input">
+                        <span>Playlist</span>
+                    </label>
+                </div>
+            </div>
+
+            <button id="downloadBtn" class="btn btn-primary">
+                Download
+            </button>
+        </div>
+
+        <div id="result" class="results-card hidden">
+            <h2 class="text-xl font-bold mb-4">Download Results</h2>
+            <div id="downloadInfo" class="grid"></div>
+        </div>
+
+        <footer class="footer">
+            <div class="creator-info">
+                <p>Created by <span class="creator-name">Aditya Dahuja</span></p>
+                <div class="social-links">
+                    <a href="https://github.com/Adityadahuja" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/aditya-dahuja" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
